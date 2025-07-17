@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './InformationPage.css';
+import './FieldPostOffices.css';
 
 function InformationPage() {
   return (
@@ -49,11 +51,13 @@ function InformationPage() {
             <i className="fas fa-hands-helping"></i>
             <span>UNHCR services</span>
           </div>
-          <div className="info-card">
+          <Link to="/field-post-offices" className="info-card">
             <i className="fas fa-mail-bulk"></i>
             <span>Field Post offices</span>
-          </div>
+          </Link>
         </div>
+
+
       </section>
     </div>
   );
