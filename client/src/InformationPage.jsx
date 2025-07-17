@@ -1,0 +1,62 @@
+import React from 'react';
+import './InformationPage.css';
+
+function InformationPage() {
+  return (
+    <div className="information-page">
+      <header className="header">
+        <div className="logo-container">
+          <div className="logo">
+            Kakuma<span className="highlight">InfoLine</span>
+          </div>
+        </div>
+        <nav className="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li className="dropdown">
+              <a href="/information">Information <i className="fas fa-angle-down"></i></a>
+            </li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#">English <i className="fas fa-angle-down"></i></a>
+            </li>
+            <li><a href="#"><i className="fas fa-search"></i></a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section className="info-section">
+        <h1>Information</h1>
+        <p>Information for asylum-seekers, refugees, and migrants in Kakuma about procedures, rights and services</p>
+        <div className="info-grid">
+          <div className="info-card">
+            <i className="fas fa-person-walking"></i>
+            <span>Arrival In Kakuma</span>
+          </div>
+          <div className="info-card">
+            <i className="fas fa-hospital"></i>
+            <span>Hospitals & clinics</span>
+          </div>
+          <div className="info-card">
+            <i className="fas fa-school"></i>
+            <span>Schools</span>
+          </div>
+          <div className="info-card">
+            <i className="fas fa-handshake"></i>
+            <span>NGO offices</span>
+          </div>
+          <div className="info-card">
+            <i className="fas fa-hands-helping"></i>
+            <span>UNHCR services</span>
+          </div>
+          <div className="info-card">
+            <i className="fas fa-mail-bulk"></i>
+            <span>Field Post offices</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default InformationPage;

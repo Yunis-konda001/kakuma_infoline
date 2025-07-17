@@ -1,0 +1,173 @@
+.information-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.header {
+  background-color: #333;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo .highlight {
+  color: #007bff; /* A shade of blue for highlighting */
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.nav .dropdown .fa-angle-down {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.info-section {
+  padding: 60px 40px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.info-section h1 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.info-section p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  text-align: left; /* Align text to the left */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-card .fas {
+  font-size: 28px;
+  color: #007bff;
+  margin-right: 20px; /* Space between icon and text */
+}
+
+.info-card span {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive Design for InformationPage */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .nav li {
+    margin: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav a {
+    justify-content: center;
+  }
+
+  .info-section {
+    padding: 40px 20px;
+  }
+
+  .info-section h1 {
+    font-size: 32px;
+  }
+
+  .info-section p {
+    font-size: 16px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    justify-content: center; /* Center content for smaller screens */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .info-card .fas {
+    margin-right: 10px; /* Adjust margin for smaller screens */
+  }
+}

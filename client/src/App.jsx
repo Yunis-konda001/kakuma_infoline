@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import HomePage from './HomePage.jsx'
+import HomePage from './HomePage';
+import InformationPage from './InformationPage';
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           </div>
         } />
         <Route path="/kakuma" element={<HomePage />} />
+        <Route path="/information" element={<InformationPage />} />
       </Routes>
     </Router>
   )

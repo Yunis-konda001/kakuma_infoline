@@ -16,7 +16,7 @@ function HomePage() {
           <ul>
             <li><a href="#">Home</a></li>
             <li className="dropdown">
-              <a href="#">Information <i className="fas fa-angle-down"></i></a>
+              <a href="/information">Information <i className="fas fa-angle-down"></i></a>
               {/* Dropdown content can go here if needed */}
             </li>
             <li><a href="#">About</a></li>
@@ -30,7 +30,7 @@ function HomePage() {
       </header>
 
       <section className="hero-section">
-        <h1>Information for asylum-seekers,<br />refugees, and migrants in Kenya.</h1>
+        <h1>Information for asylum-seekers,<br />refugees, and migrants in Kakuma Camp.</h1>
       </section>
 
       <section className="ask-question-section">
