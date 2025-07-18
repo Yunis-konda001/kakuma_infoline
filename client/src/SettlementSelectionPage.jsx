@@ -20,6 +20,8 @@ function SettlementSelectionPage() {
           Kalobeyei (Coming Soon)
         </button>
       </div>
+
+
     </div>
   );
 }

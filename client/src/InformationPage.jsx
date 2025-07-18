@@ -14,9 +14,9 @@ function InformationPage() {
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><Link to="/">Home</Link></li>
             <li className="dropdown">
-              <a href="/information">Information <i className="fas fa-angle-down"></i></a>
+              <Link to="/information">Information <i className="fas fa-angle-down"></i></Link>
             </li>
             <li><a href="#">About</a></li>
             <li>
@@ -43,10 +43,7 @@ function InformationPage() {
             <i className="fas fa-school"></i>
             <span>Schools</span>
           </div>
-          <div className="info-card">
-            <i className="fas fa-handshake"></i>
-            <span>NGO offices</span>
-          </div>
+
           <div className="info-card">
             <i className="fas fa-hands-helping"></i>
             <span>UNHCR services</span>
@@ -55,10 +52,20 @@ function InformationPage() {
             <i className="fas fa-mail-bulk"></i>
             <span>Field Post offices</span>
           </Link>
+
+          <Link to="/ngo-offices" className="info-card">
+            <i className="fas fa-building"></i>
+            <span>NGO Offices</span>
+          </Link>
         </div>
 
 
       </section>
+
+
+      <footer className="footer">
+        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

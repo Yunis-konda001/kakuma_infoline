@@ -1,4 +1,4 @@
-.information-page {
+.ngo-offices-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -24,6 +24,7 @@
   font-size: 28px;
   font-weight: bold;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .logo .highlight {
@@ -57,90 +58,27 @@
   color: #007bff;
 }
 
-.nav .dropdown .fa-angle-down {
-  margin-left: 5px;
-  font-size: 12px;
+.main-content {
+  flex-grow: 1;
 }
 
-.info-section {
+.ngo-offices-section {
   padding: 60px 40px;
   text-align: center;
   flex-grow: 1;
 }
 
-.info-section h1 {
+.ngo-offices-section h1 {
   font-size: 42px;
   color: #333;
   margin-bottom: 15px;
 }
 
-.info-section p {
+.ngo-offices-section p {
   font-size: 18px;
   color: #666;
   margin-bottom: 40px;
   line-height: 1.6;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.info-card {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align content to the left */
-  text-align: left; /* Align text to the left */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-.info-card .fas {
-  font-size: 28px;
-  color: #007bff;
-  margin-right: 20px; /* Space between icon and text */
-}
-
-.info-card span {
-  font-size: 18px;
-  color: #333;
-  font-weight: 600;
-}
-
-/* Responsive Design for InformationPage */
-.ngo-section {
-  padding: 60px 40px;
-  text-align: center;
-  background-color: #f0f2f5;
-  border-top: 1px solid #e0e0e0;
-}
-
-.ngo-section h2 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.ngo-section p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .table-container {
@@ -166,11 +104,12 @@ table td {
   border: 1px solid #e0e0e0;
   text-align: left;
   font-size: 15px;
+  color: #333; /* Changed to a darker color for visibility */
 }
 
 table th {
   background-color: #007bff;
-  color: #fff;
+  color: #fff; /* Keep header text white for contrast with blue background */
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -183,7 +122,16 @@ table tr:hover {
   background-color: #e9f5ff;
 }
 
-/* Responsive Design for InformationPage */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 14px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -210,37 +158,16 @@ table tr:hover {
     justify-content: center;
   }
 
-  .info-section {
+  .ngo-offices-section {
     padding: 40px 20px;
   }
 
-  .info-section h1 {
+  .ngo-offices-section h1 {
     font-size: 32px;
   }
 
-  .info-section p {
+  .ngo-offices-section p {
     font-size: 16px;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-card {
-    justify-content: center; /* Center content for smaller screens */
-    text-align: center; /* Center text for smaller screens */
-  }
-
-  .info-card .fas {
-    margin-right: 10px; /* Adjust margin for smaller screens */
-  }
-
-  .ngo-section {
-    padding: 40px 20px;
-  }
-
-  .ngo-section h2 {
-    font-size: 28px;
   }
 
   table th,

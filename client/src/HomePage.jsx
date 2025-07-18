@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import './HomePage.css'; // We'll create this CSS file next
 
 function HomePage() {
@@ -14,15 +15,13 @@ function HomePage() {
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><Link to="/">Home</Link></li>
             <li className="dropdown">
-              <a href="/information">Information <i className="fas fa-angle-down"></i></a>
-              {/* Dropdown content can go here if needed */}
+              <Link to="/information">Information <i className="fas fa-angle-down"></i></Link>
             </li>
             <li><a href="#">About</a></li>
             <li>
               <a href="#">English <i className="fas fa-angle-down"></i></a>
-              {/* Language dropdown content */}
             </li>
             <li><a href="#"><i className="fas fa-search"></i></a></li>
           </ul>
@@ -51,6 +50,9 @@ function HomePage() {
           </a>
         </div>
       </section>
+      <footer className="footer">
+        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
