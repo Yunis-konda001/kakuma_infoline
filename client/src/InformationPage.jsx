@@ -39,15 +39,15 @@ function InformationPage() {
             <i className="fas fa-hospital"></i>
             <span>Hospitals & clinics</span>
           </div>
-          <div className="info-card">
+          <Link to="/schools" className="info-card">
             <i className="fas fa-school"></i>
             <span>Schools</span>
-          </div>
+          </Link>
 
-          <div className="info-card">
+          <Link to="/unhcr-services" className="info-card">
             <i className="fas fa-hands-helping"></i>
             <span>UNHCR services</span>
-          </div>
+          </Link>
           <Link to="/field-post-offices" className="info-card">
             <i className="fas fa-mail-bulk"></i>
             <span>Field Post offices</span>
