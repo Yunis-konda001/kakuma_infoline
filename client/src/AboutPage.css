@@ -6,7 +6,7 @@
 }
 
 .about-page .header {
-  background-color: #0056b3;
+  background-color: #20232a;
   color: white;
   padding: 1rem 0;
   text-align: center;
@@ -29,7 +29,7 @@
 }
 
 .about-page .header .highlight {
-  color: #4CAF50;
+  color: #61dafb;
 }
 
 .about-page .header .nav ul {
@@ -53,7 +53,7 @@
 }
 
 .about-page .header .nav ul li a:hover {
-  color: #4CAF50;
+  color: #61dafb;
 }
 
 .about-page .header .nav ul li.dropdown .fa-angle-down {
@@ -95,7 +95,7 @@
 }
 
 .about-page .footer {
-  background-color: #0056b3;
+  background-color: #20232a;
   color: white;
   text-align: center;
   padding: 1rem 0;
