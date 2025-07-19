@@ -31,10 +31,10 @@ function InformationPage() {
         <h1>Information</h1>
         <p>Information for asylum-seekers, refugees, and migrants in Kakuma about procedures, rights and services</p>
         <div className="info-grid">
-          <div className="info-card">
+          <Link to="/arrival-in-kakuma" className="info-card">
             <i className="fas fa-person-walking"></i>
             <span>Arrival In Kakuma</span>
-          </div>
+          </Link>
           <Link to="/hospitals-clinics" className="info-card">
             <i className="fas fa-hospital"></i>
             <span>Hospitals & clinics</span>
