@@ -62,7 +62,7 @@ function HospitalsClinicsPage() {
             <li className="dropdown">
               <Link to="/information">Information <i className="fas fa-angle-down"></i></Link>
             </li>
-            <li><a href="#">About</a></li>
+            <li><Link to="/about">About</Link></li>
             <li>
               <a href="#">English <i className="fas fa-angle-down"></i></a>
             </li>

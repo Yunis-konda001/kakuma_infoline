@@ -9,6 +9,7 @@ import './App.css'
 import SchoolsPage from './SchoolsPage';
 import HospitalsClinicsPage from './HospitalsClinicsPage';
 import ArrivalInKakumaPage from './ArrivalInKakumaPage';
+import AboutPage from './AboutPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/unhcr-services" element={<UNHCRServicesPage />} />
           <Route path="/hospitals-clinics" element={<HospitalsClinicsPage />} />
           <Route path="/arrival-in-kakuma" element={<ArrivalInKakumaPage />} />
+          <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   )
