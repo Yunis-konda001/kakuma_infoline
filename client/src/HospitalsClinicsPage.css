@@ -1,0 +1,224 @@
+.hospitals-clinics-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.header {
+  background-color: #333;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo .highlight {
+  color: #007bff; /* A shade of blue for highlighting */
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.nav .dropdown .fa-angle-down {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.hospitals-clinics-section {
+  padding: 60px 40px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.hospitals-clinics-section h1 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.hospitals-clinics-section p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures rounded corners apply to table content */
+}
+
+table th,
+table td {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 15px;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #e9f5ff;
+}
+
+.notes-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notes-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.notes-section ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.notes-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .nav li {
+    margin: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav a {
+    justify-content: center;
+  }
+
+  .hospitals-clinics-section {
+    padding: 40px 20px;
+  }
+
+  .hospitals-clinics-section h1 {
+    font-size: 32px;
+  }
+
+  .hospitals-clinics-section p {
+    font-size: 16px;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .notes-section {
+    padding: 20px;
+  }
+
+  .notes-section h3 {
+    font-size: 20px;
+  }
+
+  .notes-section li {
+    font-size: 14px;
+  }
+}

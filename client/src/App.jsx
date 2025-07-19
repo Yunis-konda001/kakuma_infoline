@@ -7,6 +7,7 @@ import NGOOfficesPage from './NGOOfficesPage';
 import UNHCRServicesPage from './UNHCRServicesPage';
 import './App.css'
 import SchoolsPage from './SchoolsPage';
+import HospitalsClinicsPage from './HospitalsClinicsPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/ngo-offices" element={<NGOOfficesPage />} />
           <Route path="/schools" element={<SchoolsPage />} />
           <Route path="/unhcr-services" element={<UNHCRServicesPage />} />
+          <Route path="/hospitals-clinics" element={<HospitalsClinicsPage />} />
       </Routes>
     </Router>
   )

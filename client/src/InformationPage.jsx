@@ -35,10 +35,10 @@ function InformationPage() {
             <i className="fas fa-person-walking"></i>
             <span>Arrival In Kakuma</span>
           </div>
-          <div className="info-card">
+          <Link to="/hospitals-clinics" className="info-card">
             <i className="fas fa-hospital"></i>
             <span>Hospitals & clinics</span>
-          </div>
+          </Link>
           <Link to="/schools" className="info-card">
             <i className="fas fa-school"></i>
             <span>Schools</span>
