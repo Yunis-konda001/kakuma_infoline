@@ -7,27 +7,33 @@ function ArrivalInKakumaPage() {
 
   const arrivalInfo = [
     {
+      service: 'Report to camp manager',
+      location: 'Kakuma town, opposite KKM Airstrip',
+      description: 'New arrivals must report to the Camp Manager’s Office, which then refers them to the Reception Centre (either in Kakuma or Kalobeyei Settlement).',
+      contact: 'UNHCR Helpline: 1517',
+    },
+    {
       service: 'Reception Center',
       location: 'Kakuma 3, near main market',
-      description: 'First stop for registration, health checks, and basic rations (rice, pulses); child-friendly space for kids',
+      description: 'Stay 10-15 days, Get food,shelter, hygiene kits, and undergo screening & orientation',
       contact: 'UNHCR Helpline: 1517',
     },
     {
       service: 'Registration',
-      location: 'Kakuma 3, Reception Center',
-      description: 'UNHCR/DRS registers new arrivals, issues proof of registration, and assigns shelter (plastic sheet provided)',
-      contact: 'UNHCR Field Post 1, Kakuma 1, opp. NRC',
+      location: 'Kakuma 3, Filed Post 2',
+      description: 'Biometric data & photo taken, Interview on why you fled, issues proof of registration)',
+      contact: 'UNHCR Helpline: 1517',
     },
     {
-      service: 'Health Screening',
+      service: 'Return & Community Placement',
       location: 'Kakuma 3, Reception Center',
-      description: 'Initial medical checks by IRC, vaccinations, malaria testing; referrals to Amusait Hospital if needed',
-      contact: 'IRC Clinic, Kakuma 3, near Reception Center',
+      description: 'Assigned shelter in camp community',
+      contact: 'UNHCR Helpline: 1517',
     },
     {
       service: 'Food Assistance',
-      location: 'Kakuma 3, near Reception Center',
-      description: 'WFP provides bi-monthly rations or cash (KSh 820/month); register at Reception Center',
+      location: 'Food distribution center 3 - Near DonBosco 2, Food distribution center 1 - Near Arrupe Center, & Food distribution center 4 - Opp NRC',
+      description: 'WFP provides bi-monthly rations',
       contact: 'WFP Office, Kakuma 3',
     },
     {

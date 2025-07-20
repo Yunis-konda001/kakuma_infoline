@@ -81,7 +81,7 @@ function SchoolsPage() {
             </table>
           </div>
           <p className="note">*Note: Locations use camp zones/landmarks for refugee navigation.</p>
-          <p className="note">*Note: Blue State and Moneurshapell have limited or no verified data; Moneurshapell may be a misspelling or non-existent.</p>
+          {/* <p className="note">*Note: Blue State and Moneurshapell have limited or no verified data; Moneurshapell may be a misspelling or non-existent.</p> */}
           <p className="note">*Note: Contact UNHCR Helpline (1517) or school offices for exact details.</p>
         </section>
       </main>
