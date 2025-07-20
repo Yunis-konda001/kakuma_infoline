@@ -10,6 +10,7 @@ import SchoolsPage from './SchoolsPage';
 import HospitalsClinicsPage from './HospitalsClinicsPage';
 import ArrivalInKakumaPage from './ArrivalInKakumaPage';
 import AboutPage from './AboutPage';
+import ScholarshipsPage from './ScholarshipsPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/hospitals-clinics" element={<HospitalsClinicsPage />} />
           <Route path="/arrival-in-kakuma" element={<ArrivalInKakumaPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/scholarships" element={<ScholarshipsPage />} />
       </Routes>
     </Router>
   )

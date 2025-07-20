@@ -57,6 +57,10 @@ function InformationPage() {
             <i className="fas fa-building"></i>
             <span>NGO Offices</span>
           </Link>
+          <Link to="/scholarships" className="info-card">
+            <i className="fas fa-graduation-cap"></i>
+            <span>Scholarships</span>
+          </Link>
         </div>
 
 
