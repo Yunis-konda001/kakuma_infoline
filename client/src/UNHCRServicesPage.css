@@ -173,3 +173,17 @@
       font-size: 0.8em;
     }
   }
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .unhcr-services-section table {
+    display: block;
+    width: 100%;
+    min-width: 600px;
+    overflow-x: auto;
+  }
+}

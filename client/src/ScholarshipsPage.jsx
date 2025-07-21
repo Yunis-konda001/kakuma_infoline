@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ScholarshipsPage.css';
+import Navbar from './components/Navbar';
 
 function ScholarshipsPage() {
   const [selectedScholarship, setSelectedScholarship] = useState(null);
@@ -148,26 +149,7 @@ function ScholarshipsPage() {
 
   return (
     <div className="scholarships-page">
-      <header className="header">
-        <div className="logo-container">
-          <Link to="/" className="logo">
-            Kakuma<span className="highlight">InfoLine</span>
-          </Link>
-        </div>
-        <nav className="nav">
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li className="dropdown">
-              <Link to="/information">Information <i className="fas fa-angle-down"></i></Link>
-            </li>
-            <li><Link to="/about">About</Link></li>
-            <li>
-              <a href="#">English <i className="fas fa-angle-down"></i></a>
-            </li>
-            <li><a href="#"><i className="fas fa-search"></i></a></li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="main-content">
         <section className="scholarships-section">

@@ -230,6 +230,24 @@ body {
     max-width: 300px;
     justify-content: center;
   }
+  .home-page {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-section,
+  .ask-question-section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .platform-buttons {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .footer {

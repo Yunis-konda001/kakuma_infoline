@@ -175,4 +175,16 @@ table tr:hover {
     padding: 10px;
     font-size: 13px;
   }
+
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  table {
+    display: block;
+    width: 100%;
+    min-width: 600px;
+    overflow-x: auto;
+  }
 }

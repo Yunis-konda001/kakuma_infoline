@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HospitalsClinicsPage.css';
+import Navbar from './components/Navbar';
 
 function HospitalsClinicsPage() {
   const hospitalsClinics = [
@@ -38,26 +39,7 @@ function HospitalsClinicsPage() {
 
   return (
     <div className="hospitals-clinics-page">
-      <header className="header">
-        <div className="logo-container">
-          <div className="logo">
-            Kakuma<span className="highlight">InfoLine</span>
-          </div>
-        </div>
-        <nav className="nav">
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li className="dropdown">
-              <Link to="/information">Information <i className="fas fa-angle-down"></i></Link>
-            </li>
-            <li><Link to="/about">About</Link></li>
-            <li>
-              <a href="#">English <i className="fas fa-angle-down"></i></a>
-            </li>
-            <li><a href="#"><i className="fas fa-search"></i></a></li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
 
       <section className="hospitals-clinics-section">
         <h1>Hospitals & Clinics</h1>
