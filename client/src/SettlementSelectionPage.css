@@ -1,93 +1,103 @@
-.settlement-selection-page {
+.landing-hero-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.landing-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(32, 35, 42, 0.7);
+  z-index: 1;
+}
+.landing-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Modern gradient background */
-  font-family: 'Roboto', sans-serif; /* Modern font */
-  color: #fff; /* White text for contrast */
-  padding: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+  padding: 40px 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  max-width: 480px;
+  margin: 0 auto;
 }
-
-.logo {
-  font-size: 56px; /* Larger logo */
-  font-weight: 700; /* Bolder font weight */
-  margin-bottom: 20px;
+.landing-logo {
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #fff;
-  letter-spacing: 2px; /* Spacing for modern look */
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
-
-.logo .highlight {
-  color: #ffeb3b; /* Bright yellow highlight */
+.landing-logo .highlight {
+  color: #ffeb3b;
 }
-
-.info-text {
+.landing-title {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 18px;
   text-align: center;
-  font-size: 20px; /* Slightly larger text */
-  margin-bottom: 50px;
-  max-width: 700px;
-  line-height: 1.8;
-  color: #e0e0e0; /* Lighter white for readability */
-  font-weight: 300; /* Lighter font weight */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
-
-.location-buttons {
+.landing-desc {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 400;
+}
+.landing-location-buttons {
   display: flex;
   flex-direction: column;
-  gap: 25px; /* Increased gap */
+  gap: 18px;
   width: 100%;
-  max-width: 350px; /* Slightly wider buttons */
+  align-items: center;
 }
-
-.location-button {
-  padding: 18px 30px; /* More padding */
-  font-size: 22px; /* Larger font size */
-  font-weight: 600; /* Semi-bold */
+.landing-location-btn {
+  width: 100%;
+  max-width: 320px;
+  padding: 18px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #fff;
-  background-color: #00c853; /* Green button */
+  background: linear-gradient(90deg, #00c853 0%, #2575fc 100%);
   border: none;
-  border-radius: 30px; /* More rounded corners */
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for all properties */
+  transition: background 0.3s, transform 0.2s;
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.3); /* More prominent shadow */
-  text-transform: uppercase; /* Uppercase text */
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.18);
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
-
-.location-button:hover {
-  background-color: #009624; /* Darker green on hover */
-  transform: translateY(-5px) scale(1.02); /* Lift and slightly enlarge */
-  box-shadow: 0 12px 25px rgba(0, 200, 83, 0.4);
+.landing-location-btn:hover:not(.disabled) {
+  background: linear-gradient(90deg, #2575fc 0%, #00c853 100%);
+  transform: translateY(-2px) scale(1.03);
 }
-
-.location-button.disabled {
-  background-color: #757575; /* Darker grey for disabled */
+.landing-location-btn.disabled {
+  background: #bbb;
+  color: #fff;
   cursor: not-allowed;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transform: none;
+  opacity: 0.7;
 }
-
-.location-button.disabled:hover {
-  background-color: #757575;
-  transform: none;
-}
-
 @media (max-width: 600px) {
-  .logo {
-    font-size: 42px;
+  .landing-content {
+    padding: 24px 8px;
+    max-width: 98vw;
   }
-
-  .info-text {
-    font-size: 17px;
-    padding: 0 15px;
+  .landing-title {
+    font-size: 1.2rem;
   }
-
-  .location-button {
-    font-size: 19px;
-    padding: 15px 25px;
+  .landing-logo {
+    font-size: 2rem;
   }
 }

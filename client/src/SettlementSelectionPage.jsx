@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SettlementSelectionPage.css';
 import { useLanguage } from './components/LanguageContext';
 import translations from './components/translations';
@@ -7,21 +7,29 @@ import translations from './components/translations';
 function SettlementSelectionPage() {
   const { language } = useLanguage();
   const t = translations[language];
+  const navigate = useNavigate();
+  const handleKakumaClick = (e) => {
+    e.preventDefault();
+    sessionStorage.setItem('seenLanding', 'true');
+    navigate('/home');
+  };
   return (
-    <div className="settlement-selection-page">
-      <div className="logo">
-        Kakuma<span className="highlight">InfoLine</span>
-      </div>
-      <p className="info-text">
-        {t.info_hero}<br />{t.select_settlement}
-      </p>
-      <div className="location-buttons">
-        <Link to="/home" className="location-button">
-          {t.kakuma}
-        </Link>
-        <button className="location-button disabled" disabled>
-          {t.kalobeyei}
-        </button>
+    <div className="landing-hero-bg">
+      <div className="landing-overlay" />
+      <div className="landing-content">
+        <div className="landing-logo">
+          Kakuma<span className="highlight">InfoLine</span>
+        </div>
+        <h1 className="landing-title">{t.info_hero}</h1>
+        <p className="landing-desc">{t.select_settlement}</p>
+        <div className="landing-location-buttons">
+          <button className="landing-location-btn" onClick={handleKakumaClick}>
+            {t.kakuma}
+          </button>
+          <button className="landing-location-btn disabled" disabled>
+            {t.kalobeyei}
+          </button>
+        </div>
       </div>
     </div>
   );

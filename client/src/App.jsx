@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './HomePage';
 import SettlementSelectionPage from './SettlementSelectionPage';
 import InformationPage from './InformationPage';
@@ -12,13 +12,27 @@ import ArrivalInKakumaPage from './ArrivalInKakumaPage';
 import AboutPage from './AboutPage';
 import ScholarshipsPage from './ScholarshipsPage';
 import { LanguageProvider } from './components/LanguageContext';
+import React from 'react';
+
+function LandingRoute({ children }) {
+  const location = useLocation();
+  const seenLanding = sessionStorage.getItem('seenLanding');
+  if (seenLanding && location.pathname === '/') {
+    return <Navigate to="/home" replace />;
+  }
+  return children;
+}
 
 function App() {
   return (
     <LanguageProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<SettlementSelectionPage />} />
+          <Route path="/" element={
+            <LandingRoute>
+              <SettlementSelectionPage />
+            </LandingRoute>
+          } />
           <Route path="/home" element={<HomePage />} />
           <Route path="/information" element={<InformationPage />} />
           <Route path="/field-post-offices" element={<FieldPostOfficesPage />} />
