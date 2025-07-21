@@ -2,26 +2,30 @@ import React from 'react';
 import './NGOOfficesPage.css';
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function NGOOfficesPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <div className="ngo-offices-page">
       <Navbar />
 
       <main className="main-content">
         <section className="ngo-offices-section">
-          <h1>NGO Offices in Kakuma</h1>
-          <p>Find information about various NGO offices operating in Kakuma, including their services and contact details.</p>
+          <h1>{t.ngo_offices}</h1>
+          <p>{t.ngo_offices_info}</p>
 
           <p>Below is a list of NGOs operating in Kakuma, their locations, open hours, and services provided.Contact UNHCR Helpline (1517) or visit offices for exact details.</p>
           <div className="table-container">
             <table>
               <thead>
                 <tr>
-                  <th>NGO</th>
-                  <th>Location</th>
-                  <th>Open Days/Hours</th>
-                  <th>Services</th>
+                  <th>{t.ngo}</th>
+                  <th>{t.location}</th>
+                  <th>{t.open_days_hours}</th>
+                  <th>{t.services}</th>
                 </tr>
               </thead>
               <tbody>

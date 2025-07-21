@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ScholarshipsPage.css';
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function ScholarshipsPage() {
   const [selectedScholarship, setSelectedScholarship] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const { language } = useLanguage();
+  const t = translations[language];
   const scholarshipsData = [
     {
       id: 1,
@@ -123,8 +126,8 @@ function ScholarshipsPage() {
   const ScholarshipItem = ({ scholarship, onClick }) => (
     <div className="scholarship-item" onClick={() => onClick(scholarship)}>
       <h2>{scholarship.program}</h2>
-      <p><strong>Provider:</strong> {scholarship.provider}</p>
-      <p><strong>Education Level:</strong> {scholarship.educationLevel}</p>
+      <p><strong>{t.provider}:</strong> {scholarship.provider}</p>
+      <p><strong>{t.educationLevel || 'Education Level'}:</strong> {scholarship.educationLevel}</p>
     </div>
   );
 
@@ -136,12 +139,12 @@ function ScholarshipsPage() {
         <div className="scholarship-modal-content">
           <button className="scholarship-modal-close" onClick={onClose}>&times;</button>
           <h2>{scholarship.program}</h2>
-          <p><strong>Provider:</strong> {scholarship.provider}</p>
-          <p><strong>Education Level:</strong> {scholarship.educationLevel}</p>
-          <p><strong>Eligibility Criteria:</strong> {scholarship.eligibility}</p>
-          <p><strong>Application Process:</strong> {scholarship.application}</p>
-          <p><strong>Key Details:</strong> {scholarship.details}</p>
-          <p><strong>Source:</strong> {scholarship.source}</p>
+          <p><strong>{t.provider}:</strong> {scholarship.provider}</p>
+          <p><strong>{t.educationLevel || 'Education Level'}:</strong> {scholarship.educationLevel}</p>
+          <p><strong>{t.eligibility || 'Eligibility Criteria'}:</strong> {scholarship.eligibility}</p>
+          <p><strong>{t.application || 'Application Process'}:</strong> {scholarship.application}</p>
+          <p><strong>{t.details || 'Key Details'}:</strong> {scholarship.details}</p>
+          <p><strong>{t.source || 'Source'}:</strong> {scholarship.source}</p>
         </div>
       </div>
     );
@@ -153,8 +156,8 @@ function ScholarshipsPage() {
 
       <main className="main-content">
         <section className="scholarships-section">
-          <h1>Scholarships</h1>
-          <p>Information about scholarship opportunities for refugees in Kakuma.</p>
+          <h1>{t.scholarships}</h1>
+          <p>{t.scholarships_info}</p>
           <div className="scholarship-list">
             {scholarshipsData.map((scholarship) => (
               <ScholarshipItem
@@ -170,18 +173,18 @@ function ScholarshipsPage() {
               onClose={handleCloseModal}
             />
           )}
-          <p className="note"><strong>Notes:</strong></p>
+          <p className="note"><strong>{t.notes}</strong></p>
           <ul className="notes-list">
-            <li><strong>Application Channels:</strong> Most scholarships are announced via UNHCR, schools, local radio, WhatsApp trees, SIKIKA, or notice boards in Kakuma and Kalobeyei. Check with UNHCR Field Posts or DRS Camp Manager for updates.</li>
-            <li><strong>Challenges:</strong> Scholarship opportunities are limited, with high competition. Less than 1% of eligible youth access tertiary education due to funding constraints.</li>
-            <li><strong>Contact:</strong> For inquiries, reach out to UNHCR’s Kakuma helpline at 1517, email kenyakak@unhcr.org, or visit kakumayouth.com for youth opportunities.</li>
-            <li><strong>Updates:</strong> Scholarship details (e.g., costs, eligibility) may change due to exchange rates or program updates. Verify with providers like Windle International Kenya (www.windle.org) or UNHCR.</li>
+            <li><strong>{t.application_channels}</strong> Most scholarships are announced via UNHCR, schools, local radio, WhatsApp trees, SIKIKA, or notice boards in Kakuma and Kalobeyei. Check with UNHCR Field Posts or DRS Camp Manager for updates.</li>
+            <li><strong>{t.challenges}</strong> Scholarship opportunities are limited, with high competition. Less than 1% of eligible youth access tertiary education due to funding constraints.</li>
+            <li><strong>{t.contact}</strong> For inquiries, reach out to UNHCR’s Kakuma helpline at 1517, email kenyakak@unhcr.org, or visit kakumayouth.com for youth opportunities.</li>
+            <li><strong>{t.updates}</strong> Scholarship details (e.g., costs, eligibility) may change due to exchange rates or program updates. Verify with providers like Windle International Kenya (www.windle.org) or UNHCR.</li>
           </ul>
         </section>
       </main>
 
       <footer className="footer">
-        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+        <p>{t.copyright}</p>
       </footer>
     </div>
   );

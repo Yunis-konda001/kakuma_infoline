@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ArrivalInKakumaPage.css';
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function ArrivalInKakumaPage() {
   const [flippedCard, setFlippedCard] = useState(null);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const arrivalInfo = [
     {
@@ -72,8 +76,8 @@ function ArrivalInKakumaPage() {
       <Navbar />
 
       <section className="arrival-section">
-        <h1>Arrival in Kakuma</h1>
-        <p>Click on the cards to reveal detailed information about services for new arrivals.</p>
+        <h1>{t.arrival_in_kakuma}</h1>
+        <p>{t.click_cards}</p>
 
         <div className="flashcard-grid">
           {arrivalInfo.map((item, index) => (
@@ -85,12 +89,12 @@ function ArrivalInKakumaPage() {
               <div className="flashcard-inner">
                 <div className="flashcard-front">
                   <h3>{item.service}</h3>
-                  <p><strong>Location:</strong> {item.location}</p>
+                  <p><strong>{t.location}:</strong> {item.location}</p>
                 </div>
                 <div className="flashcard-back">
                   <h3>{item.service}</h3>
-                  <p><strong>Description:</strong> {item.description}</p>
-                  <p><strong>Contact:</strong> {item.contact}</p>
+                  <p><strong>{t.description}:</strong> {item.description}</p>
+                  <p><strong>{t.contact}:</strong> {item.contact}</p>
                 </div>
               </div>
             </div>
@@ -98,7 +102,7 @@ function ArrivalInKakumaPage() {
         </div>
 
         <div className="notes-section">
-          <h3>Notes:</h3>
+          <h3>{t.notes}</h3>
           <ul>
             <li>Locations use camp zones/landmarks for easy navigation.</li>
             <li>Services are free; hours typically Mon–Fri, ~8 AM–5 PM, but sometimes vary.</li>
@@ -109,7 +113,7 @@ function ArrivalInKakumaPage() {
       </section>
 
       <footer className="footer">
-        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+        <p>{t.copyright}</p>
       </footer>
     </div>
   );

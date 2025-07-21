@@ -2,25 +2,29 @@ import React from 'react';
 import './SchoolsPage.css';
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function SchoolsPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <div className="schools-page">
       <Navbar />
 
       <main className="main-content">
         <section className="schools-section">
-          <h1>Schools in Kakuma</h1>
-          <p>Find information about various schools operating in Kakuma, including their locations and services.</p>
+          <h1>{t.schools}</h1>
+          <p>{t.schools_info}</p>
 
           <p>Below is a list of schools operating in Kakuma, their locations, and services provided. Contact UNHCR Helpline (1517) or school offices for exact details.</p>
           <div className="table-container">
             <table>
               <thead>
                 <tr>
-                  <th>School</th>
-                  <th>Location</th>
-                  <th>Services</th>
+                  <th>{t.school}</th>
+                  <th>{t.location}</th>
+                  <th>{t.services}</th>
                 </tr>
               </thead>
               <tbody>

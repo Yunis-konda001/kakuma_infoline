@@ -11,12 +11,13 @@ import HospitalsClinicsPage from './HospitalsClinicsPage';
 import ArrivalInKakumaPage from './ArrivalInKakumaPage';
 import AboutPage from './AboutPage';
 import ScholarshipsPage from './ScholarshipsPage';
+import { LanguageProvider } from './components/LanguageContext';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-
+    <LanguageProvider>
+      <Router>
+        <Routes>
           <Route path="/" element={<SettlementSelectionPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/information" element={<InformationPage />} />
@@ -28,8 +29,9 @@ function App() {
           <Route path="/arrival-in-kakuma" element={<ArrivalInKakumaPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/scholarships" element={<ScholarshipsPage />} />
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </LanguageProvider>
   )
 }
 

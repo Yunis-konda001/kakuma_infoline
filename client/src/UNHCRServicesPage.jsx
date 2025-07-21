@@ -2,27 +2,31 @@ import React from 'react';
 import './UNHCRServicesPage.css';
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function UNHCRServicesPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <div className="unhcr-services-page">
       <Navbar />
 
       <main className="main-content">
         <section className="unhcr-services-section">
-          <h1>UNHCR Services in Kakuma</h1>
-          <p>Find information about various UNHCR services operating in Kakuma, including their services and contact details.</p>
+          <h1>{t.unhcr_services}</h1>
+          <p>{t.unhcr_services_info}</p>
 
           <p>Below is a list of UNHCR services operating in Kakuma, their providers, locations, open hours, and descriptions. Call UNHCR Helpline (1517) or visit offices for exact details.</p>
           <div className="table-container">
             <table>
               <thead>
                 <tr>
-                  <th>Service</th>
-                  <th>Provider</th>
-                  <th>Location</th>
-                  <th>Open Days/Hours</th>
-                  <th>Description</th>
+                  <th>{t.service}</th>
+                  <th>{t.provider}</th>
+                  <th>{t.location}</th>
+                  <th>{t.open_days_hours}</th>
+                  <th>{t.description}</th>
                 </tr>
               </thead>
               <tbody>
@@ -92,7 +96,7 @@ function UNHCRServicesPage() {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+        <p>{t.copyright}</p>
       </footer>
     </div>
   );

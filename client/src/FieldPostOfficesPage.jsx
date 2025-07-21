@@ -3,22 +3,26 @@ import { Link } from 'react-router-dom';
 import './FieldPostOffices.css';
 import './InformationPage.css'; // Import the CSS for the header
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function FieldPostOfficesPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <>
       <div className="information-page">
         <Navbar />
         <div className="field-post-offices-section">
-          <h2>Field Post Offices</h2>
-          <p>Here is detailed information about Field Post Offices in Kakuma Camp:</p>
+          <h2>{t.field_post_offices}</h2>
+          <p>{t.field_post_offices_info}</p>
           <table>
             <thead>
               <tr>
-                <th>Field Post</th>
-                <th>Location</th>
-                <th>Open Days/Hours</th>
-                <th>Roles</th>
+                <th>{t.field_post_offices}</th>
+                <th>{t.location}</th>
+                <th>{t.open_days_hours}</th>
+                <th>{t.roles}</th>
               </tr>
             </thead>
             <tbody>
@@ -64,7 +68,7 @@ function FieldPostOfficesPage() {
         </div>
       </div>
       <footer className="footer">
-        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+        <p>{t.copyright}</p>
       </footer>
     </>
   );

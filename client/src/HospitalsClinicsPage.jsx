@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './HospitalsClinicsPage.css';
 import Navbar from './components/Navbar';
+import { useLanguage } from './components/LanguageContext';
+import translations from './components/translations';
 
 function HospitalsClinicsPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
   const hospitalsClinics = [
     {
       facility: 'Amusait General Hospital',
@@ -42,17 +46,17 @@ function HospitalsClinicsPage() {
       <Navbar />
 
       <section className="hospitals-clinics-section">
-        <h1>Hospitals & Clinics</h1>
-        <p>Detailed information about hospitals and clinics in Kakuma and Kalobeyei.</p>
+        <h1>{t.hospitals_clinics}</h1>
+        <p>{t.hospitals_clinics_info}</p>
 
         <div className="table-container">
           <table>
             <thead>
               <tr>
-                <th>Facility</th>
-                <th>Provider</th>
-                <th>Location</th>
-                <th>Services</th>
+                <th>{t.facility}</th>
+                <th>{t.provider}</th>
+                <th>{t.location}</th>
+                <th>{t.services}</th>
               </tr>
             </thead>
             <tbody>
@@ -69,7 +73,7 @@ function HospitalsClinicsPage() {
         </div>
 
         <div className="notes-section">
-          <h3>Notes:</h3>
+          <h3>{t.notes}</h3>
           <ul>
             <li>Locations use camp zones/landmarks for easy refugee navigation.</li>
             <li>All facilities offer free services to refugees and host community.</li>
@@ -80,7 +84,7 @@ function HospitalsClinicsPage() {
       </section>
 
       <footer className="footer">
-        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+        <p>{t.copyright}</p>
       </footer>
     </div>
   );
