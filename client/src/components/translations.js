@@ -47,7 +47,7 @@ const translations = {
     services: 'Services',
     ngo: 'NGO',
     // Footer
-    copyright: '© 2023 Kakuma InfoLine. All rights reserved.',
+    copyright: '© 2025 Kakuma InfoLine. All rights reserved.',
     // About page
     about_title: 'About Kakuma InfoLine',
     about_mission: 'Kakuma InfoLine is a vital information hub designed to empower refugees and asylum seekers in the Kakuma Refugee Camp, Kenya. Our mission is to provide accessible, accurate, and up-to-date information on essential services, resources, and opportunities available within the camp and surrounding areas.',
@@ -110,7 +110,7 @@ const translations = {
     services: 'Huduma',
     ngo: 'NGO',
     // Footer
-    copyright: '© 2023 Kakuma InfoLine. Haki zote zimehifadhiwa.',
+    copyright: '© 2025 Kakuma InfoLine. Haki zote zimehifadhiwa.',
     // About page
     about_title: 'Kuhusu Kakuma InfoLine',
     about_mission: 'Kakuma InfoLine ni kitovu muhimu cha taarifa kilichoundwa kuwawezesha wakimbizi na waombaji hifadhi katika Kambi ya Kakuma, Kenya. Dhamira yetu ni kutoa taarifa sahihi, za kisasa na zinazopatikana kwa urahisi kuhusu huduma muhimu, rasilimali na fursa zilizopo kambini na maeneo jirani.',
