@@ -1,0 +1,22 @@
+[build]
+  # Specifies the base directory where the build command will be run.
+  # Since your project is inside the 'client' folder, Netlify will change
+  # into this directory before executing the build command.
+  base = "client/"
+
+  # The command to run to build your application for production.
+  # This command will be executed from within the 'base' directory (client/).
+  command = "npm run build"
+
+  # The directory containing the built files that Netlify should deploy.
+  # This path is relative to the 'base' directory. After 'npm run build'
+  # runs inside 'client/', it creates a 'dist' folder there.
+  publish = "dist"
+
+# Defines redirect rules for your site.
+# This rule ensures that all paths are routed to index.html,
+# allowing your client-side React Router to handle navigation.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
