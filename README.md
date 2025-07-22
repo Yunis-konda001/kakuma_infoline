@@ -84,3 +84,5 @@ To build the application for production:
 ```bash
 npm run build
 ```
+
+This will create a `dist` directory with the production-ready build.
