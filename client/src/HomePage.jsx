@@ -24,7 +24,7 @@ function HomePage() {
           <a href="#" className="platform-button facebook">
             <i className="fab fa-facebook"></i> {t.facebook} <i className="fas fa-arrow-up-right-from-square"></i>
           </a>
-          <a href="#" className="platform-button whatsapp">
+          <a href="https://wa.me/+254704273083" className="platform-button whatsapp">
             <i className="fab fa-whatsapp"></i> {t.whatsapp} <i className="fas fa-arrow-up-right-from-square"></i>
           </a>
           <a href="#" className="platform-button facebook-messenger">
