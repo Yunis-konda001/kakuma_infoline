@@ -54,3 +54,28 @@
   font-style: italic;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow-x: auto;
+  }
+  .field-post-offices-section table {
+    min-width: 600px;
+    font-size: 12px;
+  }
+  .field-post-offices-section th,
+  .field-post-offices-section td {
+    padding: 8px;
+  }
+  .table-container::after {
+    content: 'Swipe right to see more →';
+    display: block;
+    color: #888;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 4px;
+    margin-right: 8px;
+  }
+}

@@ -78,6 +78,17 @@ function Navbar() {
         <Link to="/" className="logo">
           Kakuma<span className="highlight">InfoLine</span>
         </Link>
+        <button className="hamburger" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} onClick={toggleMenu}>
+          {isMenuOpen ? (
+            <span className="close-icon">&#10005;</span>
+          ) : (
+            <>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </>
+          )}
+        </button>
       </div>
       <nav className={`nav${isMenuOpen ? ' open' : ''}`}>
         <ul>
@@ -135,17 +146,6 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <button className="hamburger" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} onClick={toggleMenu}>
-        {isMenuOpen ? (
-          <span className="close-icon">&#10005;</span>
-        ) : (
-          <>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </>
-        )}
-      </button>
     </header>
   );
 }

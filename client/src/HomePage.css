@@ -178,7 +178,25 @@ body {
 }
 
 /* Responsive Design */
+.header, .footer {
+  width: 100vw;
+  left: 0;
+  right: 0;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
+  .header, .footer {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: calc(-50vw + 50%);
+    width: 100vw;
+  }
+  .home-page {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .header {
     flex-direction: column;
     padding: 15px 20px;
@@ -248,13 +266,4 @@ body {
     flex-direction: column;
     gap: 15px;
   }
-}
-
-.footer {
-  background-color: #20232a;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 5%;
-  border-top: 1px solid #3a3f47;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
