@@ -1,5 +1,5 @@
 import React from 'react';
-import './SchoolsPage.css';
+import './shared-info-page.css';
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { useLanguage } from './components/LanguageContext';
@@ -8,72 +8,124 @@ import translations from './components/translations';
 function SchoolsPage() {
   const { language } = useLanguage();
   const t = translations[language];
+  
+  const schools = [
+    {
+      name: "Vision Secondary School",
+      location: "Kakuma 2, opposite IOM",
+      services: "Mixed day school, KCSE preparation",
+      type: "Secondary School"
+    },
+    {
+      name: "Somali Bantu Secondary School",
+      location: "Kakuma 2",
+      services: "Mixed day school, KCSE preparation",
+      type: "Secondary School"
+    },
+    {
+      name: "Greenlight Secondary School",
+      location: "Kakuma 2, near Furaha Center 2",
+      services: "Mixed day school, KCSE preparation",
+      type: "Secondary School"
+    },
+    {
+      name: "Kakuma Refugee Secondary School (KRSS)",
+      location: "Kakuma 1, opposite Don Bosco",
+      services: "Mixed day school, KCSE preparation",
+      type: "Secondary School"
+    },
+    {
+      name: "Blue State Secondary School",
+      location: "Kakuma 2, opposite Clinic 5",
+      services: "Mixed day school, KCSE preparation",
+      type: "Secondary School"
+    },
+    {
+      name: "Lifeworks Tumaini Girls Secondary School",
+      location: "Kalimchuch, opposite Ato Rite",
+      services: "Girls boarding school, KCSE preparation",
+      type: "Girls Boarding School"
+    },
+    {
+      name: "Star Light Secondary School",
+      location: "Kakuma 1, opposite Arrupe Center",
+      services: "Mixed day school, KCSE preparation",
+      type: "Secondary School"
+    }
+  ];
+
   return (
-    <div className="schools-page">
+    <div className="info-page">
       <Navbar />
 
       <main className="main-content">
-        <section className="schools-section">
-          <h1>{t.schools}</h1>
-          <p>{t.schools_info}</p>
-
-          <p>Below is a list of schools operating in Kakuma, their locations, and services provided. Contact UNHCR Helpline (1517) or school offices for exact details.</p>
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>{t.school}</th>
-                  <th>{t.location}</th>
-                  <th>{t.services}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Vision Secondary School</td>
-                  <td>Kakuma 2, opp IOM</td>
-                  <td>Mixed day school, KCSE prep</td>
-                </tr>
-                <tr>
-                  <td>Somali Bantu Secondary School</td>
-                  <td>Kakuma 2</td>
-                  <td>Mixed day school, KCSE prep</td>
-                </tr>
-                <tr>
-                  <td>Greenlight Secondary School</td>
-                  <td>Kakuma 2, near Furaha Center 2</td>
-                  <td>Mixed day school, KCSE prep</td>
-                </tr>
-                <tr>
-                  <td>Kakuma Refugee Secondary School (KRSS)</td>
-                  <td>Kakuma 1, opp Don Bosco</td>
-                  <td>Mixed day school, KCSE prep</td>
-                </tr>
-                <tr>
-                  <td>Blue State Secondary School</td>
-                  <td>Kakuma 2, opp clicnic 5</td>
-                  <td>Mixed day school, KCSE prep</td>
-                </tr>
-                <tr>
-                  <td>Lifeworks Tumaini Girls Secondary School</td>
-                  <td> Kalimchuch opp Ato Rite</td>
-                  <td>Girls Boarding school, KCSE prep</td>
-                </tr>
-                <tr>
-                  <td>Star Light Secondary School</td>
-                  <td>Kakuma 1, opp Arrupe Center</td>
-                  <td>Mixed day school, KCSE prep</td>
-                </tr>
-              </tbody>
-            </table>
+        <section className="info-section">
+          <div className="section-header primary">
+            <h1><i className="fas fa-graduation-cap"></i> {t.schools}</h1>
+            <p>Find educational opportunities and schools in Kakuma Refugee Camp</p>
           </div>
-          <p className="note">*Note: Locations use camp zones/landmarks for refugee navigation.</p>
-          {/* <p className="note">*Note: Blue State and Moneurshapell have limited or no verified data; Moneurshapell may be a misspelling or non-existent.</p> */}
-          <p className="note">*Note: Contact UNHCR Helpline (1517) or school offices for exact details.</p>
+          
+          <div className="section-content">
+            <p className="intro-text">
+              Below are the schools operating in Kakuma, their locations, and services provided. 
+              All schools offer quality education to help refugees build their future.
+            </p>
+
+            <div className="cards-grid">
+              {schools.map((school, index) => (
+                <div key={index} className="info-card">
+                  <h3 className="card-title">
+                    <i className="fas fa-school"></i>
+                    {school.name}
+                  </h3>
+                  <div className="card-type">{school.type}</div>
+                  <div className="card-info">
+                    <div className="info-item">
+                      <i className="fas fa-map-marker-alt info-icon"></i>
+                      <div>
+                        <div className="info-label">Location</div>
+                        <div className="info-text">{school.location}</div>
+                      </div>
+                    </div>
+                    <div className="info-item">
+                      <i className="fas fa-school info-icon"></i>
+                      <div>
+                        <div className="info-label">Type</div>
+                        <div className="info-text">{school.type}</div>
+                      </div>
+                    </div>
+                    <div className="info-item">
+                      <i className="fas fa-book info-icon"></i>
+                      <div>
+                        <div className="info-label">Services</div>
+                        <div className="info-text">{school.services}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="contact-info">
+              <h3><i className="fas fa-phone"></i> Need More Information?</h3>
+              <p>Contact UNHCR Helpline or school offices for exact details, enrollment procedures, and requirements.</p>
+              <a href="tel:1517" className="helpline">
+                <i className="fas fa-phone"></i>
+                Call UNHCR Helpline: 1517
+              </a>
+            </div>
+
+            <div className="note">
+              <i className="fas fa-info-circle"></i>
+              <strong>Note:</strong> Locations use camp zones and landmarks for easy navigation. 
+              Contact schools directly for the most current information about enrollment, schedules, and requirements.
+            </div>
+          </div>
         </section>
       </main>
 
       <footer className="footer">
-        <p>&copy; 2023 Kakuma InfoLine. All rights reserved.</p>
+        <p>{t.copyright}</p>
       </footer>
     </div>
   );
